@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HarborHunt</title>
+    <meta
+      name="description"
+      content="HarborHunt search UI with a clean, editorial layout."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand-wrap">
+        <div class="brand-mark">H</div>
+        <div>
+          <p class="eyebrow">Curated discovery</p>
+          <h1>HarborHunt</h1>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span class="theme-badge">Daylight mode</span>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="search-panel">
+        <p class="tagline">Find scenic corners, city stories, and visual inspiration.</p>
+
+        <form class="search-form" id="searchForm" aria-label="Search form">
+          <label for="searchInput">Search</label>
+          <div class="search-row">
+            <input
+              id="searchInput"
+              type="search"
+              name="query"
+              placeholder="Search images, places, or moods"
+              aria-label="Search input"
+            />
+            <button id="searchButton" type="submit">Search</button>
+            <button id="clearButton" type="button" class="secondary-button">Clear</button>
+          </div>
+        </form>
+
+        <div class="chip-row" aria-label="Quick pick categories">
+          <button type="button" class="chip">Nature</button>
+          <button type="button" class="chip">Cities</button>
+          <button type="button" class="chip">Animals</button>
+          <button type="button" class="chip">Travel</button>
+        </div>
+
+        <div class="status-row">
+          <p id="resultCount" class="result-count">Showing 0 results</p>
+        </div>
+      </section>
+
+      <section class="results-panel" aria-label="Search results">
+        <div id="results" class="results-grid" aria-live="polite"></div>
+        <p id="emptyState" class="empty-state" aria-live="polite">Search to see results</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
